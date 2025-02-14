@@ -209,4 +209,11 @@ public class JsonData
         }
     }
 
+
+    public Book? SearchBookByTitle(string title)
+    {
+        return Books?.FirstOrDefault(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+    }
+    
+
 }
